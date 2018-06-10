@@ -1,21 +1,3 @@
-
-# coding: utf-8
-
-# syntaxnet
-# 
-# bayes classifier - baseline
-# 
-# fastext - wo lemmatization
-# 
-# syntax data
-# 
-# Словарь окрашенной лексики senti.ru (Лукашевич Наталья)
-# 
-# Можно оставить только окрашенные слова либо учесть как слой
-# 
-# Количество положительных, количество отрицательных
-# 
-
 # In[1]:
 
 
@@ -80,17 +62,7 @@ data = pd.read_csv('/data/Coursework/all_data_normalized.csv')
 data.head()
 
 
-# In[5]:
 
-
-import sys
-#sys.path.append('/Users/ak/Yandex.Disk.localized/sentiment-neural_past_from_Denis_Kirjanov/src')
-
-
-# In[6]:
-
-
-#root_path = '/Users/ak/Yandex.Disk.localized/Магистратура ВШЭ/Chat_word_autofill/'
 root_path = '/data/Coursework/'
 embedding_model = gensim.models.Word2Vec
 embedding_model = embedding_model.load(root_path + 'model_normalized_with_chats_2.bin')
